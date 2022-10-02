@@ -8,4 +8,5 @@ node('jdk8') {
     stage("archive results") {
         junit '**/surefire-reports/*.xml'
     }      
-}    
+   }    
+}
