@@ -5,6 +5,7 @@ pipeline {
         stage('git') {
             steps {
                 git branch: 'teja', url: 'https://github.com/tejachennuru1/openmrs-core.git'
+                sh 'java --version'
             }
         }
         stage('build') {
