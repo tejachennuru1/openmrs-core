@@ -1,6 +1,5 @@
 pipeline {
     agent { label 'jdk8' }
-    parameters { string(name: 'build', defaultValue: 'package', description: 'teja') }
 
         stages {
         stage('git') {
@@ -10,7 +9,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'mvn  ${params.build}'
+                sh 'mvn package'
             }
         }
         stage('artifacts') {
@@ -23,5 +22,5 @@ pipeline {
                 junit '**/surefire-reports/*.xml'
             }
         }
-    }
+        }
 }
