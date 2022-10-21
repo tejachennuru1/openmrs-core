@@ -5,7 +5,7 @@ pipeline {
         stages {
         stage('git') {
             steps {
-                git branch: 'teja', url: 'https://github.com/tejachennuru1/openmrs-core.git'
+                git branch: git branch: 'teja', url: 'https://github.com/tejachennuru1/openmrs-core.git'
             }
         }
         stage('build') {
