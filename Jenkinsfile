@@ -2,8 +2,7 @@ pipeline {
     agent { label 'jdk8' }
     parameters { string(name: 'build', defaultValue: 'package', description: 'teja') }
 
-    triggers { cron('*/5 * * * *') }
-    stages {
+        stages {
         stage('git') {
             steps {
                 git branch: 'teja', url: 'https://github.com/tejachennuru1/openmrs-core.git'
