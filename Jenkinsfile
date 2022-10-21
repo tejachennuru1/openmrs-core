@@ -7,7 +7,7 @@ triggers { cron('*/5 * * * *') }
 stages {
     stage('git') {
         steps {
-            git branch: 'main', url: 'https://github.com/openmrs/openmrs-core.git'
+            git branch: 'master', url: 'https://github.com/tejachennuru1/openmrs-core.git'
         }
     }
     stage('build') {
