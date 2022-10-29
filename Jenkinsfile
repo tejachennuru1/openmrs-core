@@ -2,10 +2,11 @@ pipeline {
     agent  any
 
     stages {
-        stage('git')
+        stage('git') {
             steps {
                 git branch: 'master', url: 'https://github.com/tejachennuru1/openmrs-core.git'
             }
+        }
     }
     stage('build')
         steps {
