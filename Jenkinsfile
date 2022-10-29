@@ -8,17 +8,19 @@ pipeline {
             }
         }
     }
-    stage('build')
+    stage('build') {
         steps {
             sh 'mvn package'
         }
-    stage('artifacts')
+    }
+    stage('artifacts') {
         steps {
             archiveArtifacts artifacts: '**/*.jar'
         }
-
-    stage('archive results')
+    }
+    stage('archive results') {
         steps {
             junit '**/surefire-reports/*.xml'
         }
+    }
 }
